@@ -73,7 +73,7 @@ namespace Clase3PracticaMVC.Controllers
 
 
 
-        public IActionResult Cargar(string nombre,string apellido, string club)
+        public IActionResult Cargar()
         {
             return View();
         }
@@ -81,9 +81,6 @@ namespace Clase3PracticaMVC.Controllers
         public IActionResult Cargar(Jugador jug)
         {
             //TODO: agregar a la lista
-            string nombre = jug.Nombre;
-            string apellido = jug.Apellido;
-            string club = jug.Club;
             Jugadores.Add(jug);
             return RedirectToAction("JugadoresCargados");
         }
